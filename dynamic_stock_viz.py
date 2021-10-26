@@ -41,7 +41,7 @@ from bokeh.layouts import row, column
 from bokeh.models.widgets import Slider, Select, Div
 from bokeh.palettes import Category20 
 
-# Initiating parameters for the model
+# Initializing parameters for the model
 data = smf.data
 lifetime_start = 15
 lifetime_end = 15
@@ -65,7 +65,7 @@ def update_driver(attrname, old, new):
     
     lifetime = smf.range_lifetime(lifetime_start, lifetime_end, stdev, len(smf.data['Time']))
     DSM = smf.compute_model(smf.data, lifetime, driver, input_type=selected_input)
-    print("Input distribution", new)
+    print("Driver:", new)
     plot_data = {'time': DSM.t,
              'stock': DSM.s,
              'inflows': DSM.i,
