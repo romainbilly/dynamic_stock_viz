@@ -3,6 +3,7 @@
 To run, open the command prompt, go to this directory and run this command (replacing the path by your own local repository). Python and bokeh should be installed and added to PATH:
 
 $ cd C:\Users\romainb\Documents\Dynamic MFA Viz Python Bokeh
+
 $ bokeh serve --show dynamic_stock_viz.py
 
 Script building an interactive Bokeh visualization
