@@ -81,7 +81,7 @@ def update_driver(attrname, old, new):
         )
     cohorts_matrix.insert(
         0, "time",[str(e) for e in plot_data["time"].to_numpy().tolist()])
-    source_bar = ColumnDataSource(data=cohorts_matrix)
+    source_bar.data=cohorts_matrix
     
 def update_input(attrname, old, new):
     """
@@ -110,7 +110,8 @@ def update_input(attrname, old, new):
         )
     cohorts_matrix.insert(
         0, "time",[str(e) for e in plot_data["time"].to_numpy().tolist()])
-    source_bar = ColumnDataSource(data=cohorts_matrix)
+    #source_bar = ColumnDataSource(data=cohorts_matrix)
+    source_bar.data = cohorts_matrix
     
 def update_lifetime_start(attrname, old, new):
     """
@@ -142,7 +143,7 @@ def update_lifetime_start(attrname, old, new):
         )
     cohorts_matrix.insert(
         0, "time",[str(e) for e in plot_data["time"].to_numpy().tolist()])
-    source_bar = ColumnDataSource(data=cohorts_matrix)
+    source_bar.data=cohorts_matrix
     
 def update_lifetime_end(attrname, old, new):
     """
@@ -172,7 +173,7 @@ def update_lifetime_end(attrname, old, new):
         )
     cohorts_matrix.insert(
         0, "time",[str(e) for e in plot_data["time"].to_numpy().tolist()])
-    source_bar = ColumnDataSource(data=cohorts_matrix)
+    source_bar.data=cohorts_matrix
     
     
 def update_stdev(attrname, old, new):
@@ -203,7 +204,7 @@ def update_stdev(attrname, old, new):
         )
     cohorts_matrix.insert(
         0, "time",[str(e) for e in plot_data["time"].to_numpy().tolist()])
-    source_bar = ColumnDataSource(data=cohorts_matrix)
+    source_bar.data=cohorts_matrix
     
     
 def make_line_plots(source):
